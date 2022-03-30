@@ -13,12 +13,11 @@ import requests
 # result = requests.post(url)  # 发送请求
 # print('##############查询结果##############')
 # print(result.text)  # 返回数据
-
 '''
 
 通过基金编码获取估值
 '''
-amount=[41103,35686,2841,14066,34940,3430,4141,1162,4846,2334,4779,1989,3162]
+amount=[41079,35980,2707,14024,35073,3282,3930,1085,4799,2294,5645,1985,3102]
 code_list=['320007','400015','002984','011103','003096','001938','005827','110022','161122','168203','005693','008618','005224']
 jz_list=[]
 for n in range(len(code_list)):
@@ -34,7 +33,6 @@ for n in range(len(code_list)):
     jz_list.append((float(data['gszzl'])/100))
 
 
-#print(jz_list)
 income=int(sum(map(lambda x,y:x*y,amount,jz_list)))
 print("今天估值收益：",income)
 print("爬取时间： %s" % data['gztime'])
