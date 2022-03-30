@@ -1,2 +1,2 @@
-#clawJJ.py 爬取天天基金并算出临时收益
+#clawJJ.py 爬取天天基金并根据持仓算出临时收益
 #fileinfo.py 显示file信息
